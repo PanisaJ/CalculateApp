@@ -1,14 +1,26 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Calculate
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-item>
+      <ion-label position="floating">number 1:</ion-label>
+       <ion-input type="number" [(ngModel)]="num1"></ion-input>
+    </ion-item>
+   <ion-item>
+      <ion-label position="floating">number 2:</ion-label>
+       <ion-input type="number" [(ngModel)]="num2"></ion-input>
+    </ion-item>
+   <ion-button type="submit" shape="round" color="primary" expand="block" (click)="calculate(1)">+</ion-button>
+   <ion-button type="submit" shape="round" color="primary" expand="block" (click)="calculate(2)">-</ion-button>
+   <ion-button type="submit" shape="round" color="primary" expand="block" (click)="calculate(3)">X</ion-button>
+   <ion-button type="submit" shape="round" color="primary" expand="block" (click)="calculate(4)">%</ion-button>
+   <ion-item>
+      <ion-label >result : {{result}}</ion-label>
+    </ion-item>
+   <ion-button type="submit" shape="round" color="primary" expand="block" (click)="clear()">Clear</ion-button>
 </ion-content>
